@@ -6,9 +6,10 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
-    <%= htmlWebpackPlugin.options.title %>
+    Sibiraj Rajendran
   </title>
   <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+  <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.png">
   <!-- base url -->
   <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
   <% if (webpackConfig.htmlElements.headTags) { %>
@@ -45,9 +46,16 @@
               <!-- Preload link tags will be injected by webpack here -->
 </head>
 
-<body>
+<body >
   <app>
-    Loading...
+    <!--<div layout="row" layout-sm="column" layout-align="space-around">
+      <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div>
+    <mat-spinner></mat-spinner>
+     <img style="width:100%;filter: grayscale(100%);" src="./assets/img/Loading.JPG" />
+  </div>-->
+  <img style="display: block;margin:0 auto; margin-top:25% ;max-height:15%;max-width: 15% "  src="./assets/img/loading-2.gif" />
   </app>
 </body>
 
