@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
-import { MatFormFieldModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatFormFieldModule, MatProgressSpinnerModule,MatMenuModule } from '@angular/material';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -54,6 +54,7 @@ type StoreType = {
     MatCheckboxModule,
     MatInputModule,
     MatFormFieldModule,
+    MatMenuModule,
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
     FormsModule,

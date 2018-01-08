@@ -8,26 +8,35 @@
  <mat-spinner></mat-spinner>
 </html>-->
 <html>
-<body>
 
-  <nav style="background:#fafafa;height: 100px;margin:auto" class="navbar navbar-fixed-top">
-    <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header">
-      sibiraj rajendran
-    </div>
+<body>
+  <nav style="background:#fafafa;height: 15%;margin:auto" class="navbar navbar-fixed-top">
+
+      <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header col-11">
+        <a style="background:#fafafa;color:#333;font-size: 15px" href="#sibi">sibiraj rajendran</a>
+      </div>
+      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true">
+        <span class="navbar-toggler-icon">jjj</span>
+      </button>-->
+      <span style="margin-left: auto" class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="true"  [matMenuTriggerFor]="menu">Menu</span>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item></button>
+        <button mat-menu-item>About</button>
+      </mat-menu>
   </nav>
   <div>
     <img style="width:100%" src="../../assets/img/programmer-1.jpg" />
   </div>
   <div style="background-color: rgb(225, 206, 189)">
-      <p style="font-family: 'Open Sans', sans-serif;
+    <p style="font-family: 'Open Sans', sans-serif;
       text-align: center;
       padding-top: 60px;
       letter-spacing: 0.3em;
       font-weight: 700;
       font-size: 11px;
       text-transform: uppercase;">
-          HELLO, WORLD! I'M A DEVELOPER.
-  </p>
+      HELLO, WORLD! I'M A DEVELOPER.
+    </p>
   </div>
 </body>
 
