@@ -1,0 +1,17 @@
+.heading{
+  font-family:'Monaco', 'Courier New';
+  color: white;
+  margin-top: 2%;
+  margin-left: 3%;
+
+}
+
+.answer{
+  font-family:'Monaco', 'Courier New';
+  color: wheat;
+  margin-left: 5%;
+}
+
+.inner{
+  margin-left: 7%;
+}

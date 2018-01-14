@@ -1,20 +1,23 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Routes } from '@angular/router';
+import { NgClass } from '@angular/common'
 import { AppState } from '../app.service';
+import { Router } from '@angular/router/src/router';
 
 @Component({
-  selector: 'home',  // <home></home>
-  styleUrls: [ './home.component.css' ],
+  selector: 'home',
+  styleUrls: ['./home.component.css'],
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  constructor(
-  ) {}
+  public menus: boolean = false;
+
+  constructor() {}
 
   public ngOnInit() {
     console.log('Home');
+  }
+
+  public routeToAbout(){
   }
 }

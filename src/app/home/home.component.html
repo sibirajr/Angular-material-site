@@ -12,31 +12,114 @@
 <body>
   <nav style="background:#fafafa;height: 15%;margin:auto" class="navbar navbar-fixed-top">
 
-      <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header col-11">
-        <a style="background:#fafafa;color:#333;font-size: 15px" href="#sibi">sibiraj rajendran</a>
-      </div>
-      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true">
+    <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header col-10">
+      <a style="background:#fafafa;color:#333;font-size: 15px;text-decoration: none;" href="#sibi">sibiraj rajendran</a>
+    </div>
+    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true">
         <span class="navbar-toggler-icon">jjj</span>
       </button>-->
-      <span style="margin-left: auto" class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="true"  [matMenuTriggerFor]="menu">Menu</span>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item></button>
-        <button mat-menu-item>About</button>
-      </mat-menu>
+    <span style="margin-left: auto" class="navbar-toggler" data-toggle="collapse" aria-expanded="true" [matMenuTriggerFor]="menu">
+      <i style="cursor: pointer" class="material-icons">menu</i>
+    </span>
+    <mat-menu #menu="matMenu">
+      <!--<button mat-menu-item [disabled]></button>
+      <button mat-menu-item>About</button>-->
+      <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+    </mat-menu>
   </nav>
-  <div>
+  <div id="sibi">
     <img style="width:100%" src="../../assets/img/programmer-1.jpg" />
   </div>
   <div style="background-color: rgb(225, 206, 189)">
     <p style="font-family: 'Open Sans', sans-serif;
       text-align: center;
-      padding-top: 60px;
+      padding-top: 4%;
       letter-spacing: 0.3em;
       font-weight: 700;
       font-size: 11px;
-      text-transform: uppercase;">
+      text-transform: uppercase;
+      padding-bottom: 4%">
       HELLO, WORLD! I'M A DEVELOPER.
     </p>
+    <div style="margin-right:0px;margin-left: 0px " class="row">
+      <div class="col-md-2 col-sm-0"></div>
+      <div class="col-md-8 col-sm-10">
+        <div class="panel panel-default">
+          <div style="background-color:#7c8081" class="panel-heading"></div>
+          <div id="about" style="background-color:#383737" class="panel-body">
+            <div class="heading">
+              > Sibi.origin
+            </div>
+            <div class="answer">
+              => [Rasipuram Namakkal T.N]
+            </div>
+            <div class="heading">
+              > Sibi.education
+            </div>
+            <div class="answer">
+              => [Bachelor of Engineering]
+            </div>
+            <div class="heading">
+              > Sibi.major
+            </div>
+            <div class="answer">
+              => [Computer Science]
+            </div>
+            <div class="heading">
+              > Sibi.college
+            </div>
+            <div class="answer">
+              => [Panimalar Poonamallee Chennai]
+            </div>
+            <div class="heading">
+              > Sibi.graduation
+            </div>
+            <div class="answer">
+              => [2016]
+            </div>
+            <div class="heading">
+              > Sibi.interest
+            </div>
+            <div class="answer">
+              => [Code, Music, Astronomy, Coffee]
+            </div>
+            <div class="heading">
+              > Sibi.workExperience
+            </div>
+            <div class="answer">
+              => Latest Work Experience
+              <br/>
+              <span class="answer">&#123;</span>
+              <br/>
+              <span class="inner">
+                [company: "DXC Technology"],</span>
+              <br/>
+              <span class="inner">[role: "Associate Applications Developer"],</span>
+              <br/>
+              <span class="inner"> [startDate: "April 2017"]</span>
+              <br/>
+              <span class="answer">&#125;</span>
+            </div>
+            <div class="heading">
+              > Sibi.email
+            </div>
+            <div style="color: #3a92c8" class="answer">
+              =>
+              <a href="mailto:sibirajandrajendran@gmail.com">["sibirajandrajendran@gmail.com"]</a>
+            </div>
+
+          </div>
+        </div>
+        <div style="margin-top:4%;margin-bottom: 4%;text-align: center">
+          ---
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
