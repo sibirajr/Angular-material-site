@@ -1,17 +1,31 @@
-.heading{
-  font-family:'Monaco', 'Courier New';
+.heading {
+  font-family: "Monaco", "Courier New";
   color: white;
   margin-top: 2%;
   margin-left: 3%;
-
 }
 
-.answer{
-  font-family:'Monaco', 'Courier New';
+.answer {
+  font-family: "Monaco", "Courier New";
   color: wheat;
   margin-left: 5%;
 }
 
-.inner{
+.inner {
   margin-left: 7%;
+}
+
+.menuList {
+  list-style: none;
+  text-align: center;
+  -webkit-padding-start: 0px;
+  min-height: 6vh;
+}
+
+.anchorMenu {
+  color: white;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }

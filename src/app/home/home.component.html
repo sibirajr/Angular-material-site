@@ -1,12 +1,3 @@
-<!--<html>
-<mat-checkbox>foo</mat-checkbox>
-
-<mat-input-container>
-  <mat-placeholder>Foo</mat-placeholder>
-  <input matInput/>
-</mat-input-container>
- <mat-spinner></mat-spinner>
-</html>-->
 <html>
 
 <body>
@@ -24,18 +15,23 @@
     <mat-menu #menu="matMenu">
       <!--<button mat-menu-item [disabled]></button>
       <button mat-menu-item>About</button>-->
-      <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
+      <ul style="min-width: 20vw; margin-top: 13vh; padding: 0%">
+        <li class="menuList">
+          <a class="anchorMenu" href="#home">Home</a>
+        </li>
+        <li class="menuList">
+          <a class="anchorMenu" href="#contact">Contact</a>
+        </li>
+        <li class="menuList">
+          <a class="anchorMenu" href="#about" >About</a>
+        </li>
+      </ul>
     </mat-menu>
   </nav>
   <div id="sibi">
     <img style="width:100%" src="../../assets/img/programmer-1.jpg" />
   </div>
-  <div style="background-color: rgb(225, 206, 189)">
+  <div id="about" style="background-color: rgb(225, 206, 189)">
     <p style="font-family: 'Open Sans', sans-serif;
       text-align: center;
       padding-top: 4%;
@@ -51,7 +47,7 @@
       <div class="col-md-8 col-sm-10">
         <div class="panel panel-default">
           <div style="background-color:#7c8081" class="panel-heading"></div>
-          <div id="about" style="background-color:#383737" class="panel-body">
+          <div style="background-color:#383737" class="panel-body">
             <div class="heading">
               > Sibi.origin
             </div>
