@@ -3,27 +3,28 @@
 <body>
   <nav style="background:#fafafa;height: 15%;margin:auto" class="navbar navbar-fixed-top">
 
-    <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header col-10">
+    <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header col-12">
       <a style="background:#fafafa;color:#333;font-size: 15px;text-decoration: none;" href="#sibi">sibiraj rajendran</a>
-    </div>
-    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true">
+
+      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true">
         <span class="navbar-toggler-icon">jjj</span>
       </button>-->
-    <span style="margin-left: auto" class="navbar-toggler" data-toggle="collapse" aria-expanded="true" [matMenuTriggerFor]="menu">
-      <i style="cursor: pointer" class="material-icons">menu</i>
-    </span>
+      <span style="float: right" class="navbar-toggler" data-toggle="collapse" aria-expanded="true" [matMenuTriggerFor]="menu">
+        <i style="cursor: pointer" class="material-icons">menu</i>
+      </span>
+    </div>
     <mat-menu #menu="matMenu">
       <!--<button mat-menu-item [disabled]></button>
       <button mat-menu-item>About</button>-->
       <ul style="min-width: 20vw; margin-top: 13vh; padding: 0%">
         <li class="menuList">
-          <a class="anchorMenu" href="#home">Home</a>
+          <a class="anchorMenu" href="#about">about</a>
         </li>
         <li class="menuList">
-          <a class="anchorMenu" href="#contact">Contact</a>
+          <a class="anchorMenu" href="#résumé">Résumé</a>
         </li>
         <li class="menuList">
-          <a class="anchorMenu" href="#about" >About</a>
+          <a class="anchorMenu" href="#contact">contact</a>
         </li>
       </ul>
     </mat-menu>
@@ -82,7 +83,7 @@
               > Sibi.interest
             </div>
             <div class="answer">
-              => [Code, Music, Astronomy, Coffee]
+              => [Code, Music, Youtube, Astronomy, GOT, Coffee]
             </div>
             <div class="heading">
               > Sibi.workExperience
@@ -113,6 +114,62 @@
         </div>
         <div style="margin-top:4%;margin-bottom: 4%;text-align: center">
           ---
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #ddd">
+    <p style="text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.3em;
+    font-weight: 800;
+    font-size: 11px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-transform: uppercase;">Résumé </p>
+    <div style="margin-right:0px;margin-left: 0px " class="row">
+      <div class="col-md-2 col-sm-0"></div>
+      <div class="col-md-8 col-sm-10">
+        <p style="font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+    border-bottom: 1px solid #CEC8C8;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding-bottom: 3%;
+    margin-bottom: 5%;
+    ">Education</p>
+        <div onMouseOver="this.className= 'collegeDetailsOut'" onMouseOut="this.className= 'collegeDetails'" style="line-height: 34px;font-size: 19px;font-family: 'Karla', sans-serif;letter-spacing: 0.1em;filter: grayscale(100%)">
+          <div class=" col-md-1 hidden-sm hidden-xs">
+            <img src="../../assets/img/pit.png" />
+          </div>
+          <div class="row col-md-11 col-sm-12">
+            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
+              <a target="_blank" class="col-md-8" style="font-weight: bold;text-decoration: none" href="http://www.pit.ac.in/">Panimalar Institute of Technology</a>
+              <span style="float: right;font-size: 14px" class="col-md-4">2012 - 2016</span>
+            </div>
+            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
+              <span class="col-md-8" style="font-weight: bold">Computer Science, B.E.</span>
+              <span style="float: right;font-size: 14px" class="col-md-4">Chennai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="font-family: 'Open Sans', sans-serif;
+
+    margin-right:0px;
+    margin-left: 0px
+    ">
+      <div class="col-md-12 col-sm-12" style="text-align: center; margin-top: 3%;letter-spacing: 0.3em; font-size:14px;text-transform:uppercase;">Relevant Coursework:</div>
+      <div class="col-md-12 col-sm-12" style="margin-right:0px;margin-left: 0px; margin-top: 3%;line-height: 34px;font-size: 16px">
+        <div class="col-md-3 col-sm-2"></div>
+        <div class="col-md-7 col-sm-10">
+          <ul style="list-style: circle">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ul>
         </div>
       </div>
     </div>

@@ -29,3 +29,12 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+.collegeDetails{
+  filter: grayscale(100%) !important;
+}
+
+.collegeDetailsOut{
+  filter: grayscale(0%) !important;
+  color: #b81c02 !important
+}
