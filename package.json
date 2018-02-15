@@ -1,7 +1,7 @@
 {
-  "name": "angular-starter",
-  "version": "7.0.0",
-  "description": "An Angular Webpack Starter kit featuring Angular (Router, Http, Forms, Services, Tests, E2E, Coverage), Karma, Protractor, Jasmine, Istanbul, TypeScript, and Webpack by AngularClass",
+  "name": "sibiraj_per_site",
+  "version": "1.0.0",
+  "description": "personal website",
   "keywords": [
     "angular",
     "angular2",
@@ -12,9 +12,9 @@
     "tipe",
     "tipe.io"
   ],
-  "author": "Patrick Stapleton <patrick@tipe.io>",
-  "homepage": "https://github.com/gdi2290/angular-starter",
-  "license": "MIT",
+  "author": "sibiraj rajendran",
+  "homepage": "",
+  "license": "none",
   "scripts": {
     "build:aot:prod": "npm run clean:dist && npm run clean:aot && cross-env BUILD_AOT=1 npm run webpack -- --config config/webpack.prod.js  --progress --profile --bail",
     "build:aot": "npm run build:aot:prod",
@@ -94,13 +94,12 @@
     "@angular/platform-browser-dynamic": "~5.0.1",
     "@angular/platform-server": "~5.0.1",
     "@angular/router": "~5.0.1",
-    "angular-animate": "^1.6.8",
     "angular-material": "^1.1.5",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.1",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
-    "ng2-smooth-scroll": "^1.0.1",
+    "ng-drag-drop": "^4.0.0",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.5.2",
     "zone.js": "~0.8.18"
@@ -163,7 +162,7 @@
     "tslint": "~4.5.1",
     "tslint-loader": "^3.5.2",
     "typedoc": "^0.7.1",
-    "typescript": "~2.5.3",
+    "typescript": "~2.5.2",
     "uglifyjs-webpack-plugin": "^1.0.1",
     "url-loader": "^0.5.8",
     "webpack": "^3.8.1",
@@ -172,13 +171,7 @@
     "webpack-dll-bundles-plugin": "^1.0.0-beta.5",
     "webpack-merge": "~4.1.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gdi2290/angular-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gdi2290/angular-starter/issues"
-  },
+  
   "engines": {
     "node": ">= 4.2.1",
     "npm": ">= 3"
