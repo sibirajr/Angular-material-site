@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { MatFormFieldModule, MatProgressSpinnerModule, MatMenuModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
+
+import {NgsRevealModule} from 'ng-scrollreveal';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -61,6 +63,7 @@ type StoreType = {
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    NgsRevealModule.forRoot(),
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules

@@ -7,12 +7,13 @@ import { Router } from '@angular/router/src/router';
 @Component({
   selector: 'home',
   styleUrls: ['./home.component.css'],
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
   public menus: boolean = false;
 
-  constructor() {}
+  constructor() {
+  }
 
   public ngOnInit() {
     console.log('Home');

@@ -1,22 +1,15 @@
 <html>
 
 <body>
-  <nav style="background: rgba(255, 255, 255, 0.9);height: 15%;margin:auto" class="navbar navbar-fixed-top">
-
-    <div style="font-family:'Montserrat', sans-serif;letter-spacing:0.2em;text-transform: uppercase;text-align: center;" class="navbar-header col-12">
-      <a style="background:inherit;color:#333;font-size: 15px;text-decoration: none;" href="#sibi">sibiraj rajendran</a>
-
-      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-expanded="true">
-        <span class="navbar-toggler-icon">jjj</span>
-      </button>-->
-      <span style="float: right" class="navbar-toggler" data-toggle="collapse" aria-expanded="true" [matMenuTriggerFor]="menu">
-        <i style="cursor: pointer" class="material-icons">menu</i>
+  <nav class="navbar navbar-fixed-top navBarSt">
+    <div class="navbar-header col-12 navbarText">
+      <a class="aLink" href="#sibi">sibiraj rajendran</a>
+      <span class="navbar-toggler matIcon" data-toggle="collapse" aria-expanded="true" [matMenuTriggerFor]="menu">
+        <i class="material-icons">menu</i>
       </span>
     </div>
     <mat-menu #menu="matMenu">
-      <!--<button mat-menu-item [disabled]></button>
-      <button mat-menu-item>About</button>-->
-      <ul style="min-width: 20vw; margin-top: 13vh; padding: 0%">
+      <ul class="menuStyle">
         <li class="menuList">
           <a class="anchorMenu" href="#about">about</a>
         </li>
@@ -29,287 +22,230 @@
       </ul>
     </mat-menu>
   </nav>
-  <div class="imgMain hidden-sm hidden-xs"></div>
- <img class="hidden-md hidden-lg" style="width:100%" src="../../assets/img/programmer-1.jpg" />
-
-  <div id="about" style="background-color: rgb(225, 206, 189)">
-    <p style="font-family: 'Open Sans', sans-serif;
-      text-align: center;
-      padding-top: 4%;
-      letter-spacing: 0.3em;
-      font-weight: 700;
-      font-size: 11px;
-      text-transform: uppercase;
-      padding-bottom: 4%">
+  <div ngsRevealSet [ngsSelector]="'.item'">
+    <div class="imgMain hidden-sm hidden-xs item"></div>
+    <img class="hidden-md hidden-lg item" style="width:100%" src="../../assets/img/programmer-1.jpg" />
+  </div>
+  <div id="about" class="bgClr">
+    <p class="PColor">
       HELLO, WORLD! I'M A DEVELOPER.
     </p>
-    <div style="margin-right:0px;margin-left: 0px " class="row">
+    <div class="row rowOverR">
       <div class="col-md-2 col-sm-0"></div>
       <div class="col-md-8 col-sm-10">
         <div class="panel panel-default">
-          <div style="background-color:#7c8081" class="panel-heading"></div>
-          <div style="background-color:#383737" class="panel-body">
+          <div class="panel-heading PHeadCol"></div>
+          <div class="panel-body PContentCol" ngsRevealSet [ngsSelector]="'.item'">
             <div class="heading">
               > Sibi.origin
             </div>
-            <div class="answer">
+            <div class="answer item">
               => [Rasipuram Namakkal T.N]
             </div>
             <div class="heading">
               > Sibi.education
             </div>
-            <div class="answer">
+            <div class="answer item">
               => [Bachelor of Engineering]
             </div>
             <div class="heading">
               > Sibi.major
             </div>
-            <div class="answer">
+            <div class="answer item">
               => [Computer Science]
             </div>
             <div class="heading">
               > Sibi.college
             </div>
-            <div class="answer">
+            <div class="answer item">
               => [Panimalar Poonamallee Chennai]
             </div>
             <div class="heading">
               > Sibi.graduation
             </div>
-            <div class="answer">
+            <div class="answer item">
               => [2016]
             </div>
             <div class="heading">
               > Sibi.interest
             </div>
-            <div class="answer">
+            <div class="answer item">
               => [Code, Music, Youtube, Astronomy, GOT, Coffee]
             </div>
             <div class="heading">
               > Sibi.workExperience
             </div>
-            <div class="answer">
+            <div class="answer item">
               => Latest Work Experience
               <br/>
-              <span class="answer">&#123;</span>
+              <span class="answer item">&#123;</span>
               <br/>
-              <span class="inner">
+              <span class="inner  item">
                 [company: "DXC Technology"],</span>
               <br/>
-              <span class="inner">[role: "Associate Applications Developer"],</span>
+              <span class="inner item">[role: "Associate Applications Developer"],</span>
               <br/>
-              <span class="inner"> [startDate: "April 2017"]</span>
+              <span class="inner item"> [startDate: "April 2017"]</span>
               <br/>
-              <span class="answer">&#125;</span>
+              <span class="answer item">&#125;</span>
             </div>
             <div class="heading">
               > Sibi.email
             </div>
-            <div style="color: #3a92c8" class="answer">
+            <div class="answer item PLinkCol">
               =>
               <a href="mailto:sibirajandrajendran@gmail.com">["sibirajandrajendran@gmail.com"]</a>
             </div>
-
           </div>
         </div>
-        <div style="margin-top:4%;margin-bottom: 4%;text-align: center">
+        <div class="divider">
           ---
         </div>
       </div>
     </div>
   </div>
-  <div style="background-color: #ddd">
-    <p style="text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.3em;
-    font-weight: 800;
-    font-size: 11px;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    text-transform: uppercase;">Résumé </p>
-    <div style="margin-right:0px;margin-left: 0px " class="row">
+  <div class="ResBgCol">
+    <p class="PResCol">Résumé </p>
+    <div class="row rowOverR">
       <div class="col-md-2 col-sm-0"></div>
       <div class="col-md-8 col-sm-10">
-        <p style="font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.3em;
-    font-weight: 700;
-    border-bottom: 1px solid #CEC8C8;
-    font-size: 11px;
-    text-transform: uppercase;
-    padding-bottom: 3%;
-    margin-bottom: 5%;
-    ">Education</p>
+        <p class="PEduSty">Education</p>
         <div onMouseOver="this.className= 'collegeDetailsOut'" onMouseOut="this.className= 'collegeDetails'" style="line-height: 34px;font-size: 19px;font-family: 'Karla', sans-serif;letter-spacing: 0.1em;filter: grayscale(100%)">
-          <div class=" col-md-1 hidden-sm hidden-xs">
-            <img src="../../assets/img/pit.png" />
+          <div class=" col-md-1 hidden-sm hidden-xs" ngsRevealSet [ngsSelector]="'.item'">
+            <img class="item" src="../../assets/img/pit.png" />
           </div>
           <div class="row col-md-11 col-sm-12">
-            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
-              <a target="_blank" class="col-md-8" style="font-weight: bold;text-decoration: none" href="http://www.pit.ac.in/">Panimalar Institute of Technology</a>
-              <span style="float: right;font-size: 14px" class="col-md-4">2012 - 2016</span>
+            <div class="row col-md-12 col-sm-12 rowOverR">
+              <a target="_blank" class="col-md-8 CollLink" href="http://www.pit.ac.in/">Panimalar Institute of Technology</a>
+              <span class="col-md-4 years">2012 - 2016</span>
             </div>
-            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
-              <span class="col-md-8" style="font-weight: bold">Computer Science, B.E.</span>
-              <span style="float: right;font-size: 14px" class="col-md-4">Chennai</span>
+            <div class="row rowOverR col-md-12 col-sm-12">
+              <span class="col-md-8 boldText">Computer Science, B.E.</span>
+              <span class="col-md-4 years">Chennai</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row" style="font-family: 'Open Sans', sans-serif;
-
-    margin-right:0px;
-    margin-left: 0px
-    ">
-      <div class="col-md-12 col-sm-12" style="text-align: center; margin-top: 3%;letter-spacing: 0.3em; font-size:14px;text-transform:uppercase;">Relevant Coursework:</div>
-      <div class="col-md-12 col-sm-12" style="margin-right:0px;margin-left: 0px; margin-top: 3%;line-height: 34px;font-size: 16px">
+    <div class="row RCourse">
+      <div class="col-md-12 col-sm-12 cContent">Relevant Coursework:</div>
+      <div class="col-md-12 col-sm-12 CCourseWork">
         <div class="col-md-3 col-sm-2"></div>
         <div class="col-md-7 col-sm-10">
-          <ul style="list-style: circle;font-size: 19px;
-          line-height: 34px; margin-bottom: 4%">
-            <li>Fundamentals of Computer Programming</li>
-            <li>Object-Oriented Programming</li>
-            <li>Principles of Software Development</li>
-            <li>Design and Analysis of Algorithms</li>
-            <li>Basic Organization of Computer Systems</li>
-            <li>Operating Systems</li>
-            <li>Database Management</li>
-            <li>Advanced Web Technologies</li>
-            <li>Digital Principles and Systems Design</li>
-            <li>Data Structures </li>
-            <li>Theory of Computation </li>
-            <li>Computer Networks </li>
-            <li>Computer Graphics</li>
-            <li>Software Quality Assurance</li>
-            <li>Engineering Mathematics</li>
+          <ul class="listCourse" ngsRevealSet [ngsSelector]="'.item'">
+            <li class="item">Fundamentals of Computer Programming</li>
+            <li class="item">Object-Oriented Programming</li>
+            <li class="item">Principles of Software Development</li>
+            <li class="item">Design and Analysis of Algorithms</li>
+            <li class="item">Basic Organization of Computer Systems</li>
+            <li class="item">Operating Systems</li>
+            <li class="item">Database Management</li>
+            <li class="item">Advanced Web Technologies</li>
+            <li class="item">Digital Principles and Systems Design</li>
+            <li class="item">Data Structures </li>
+            <li class="item">Theory of Computation </li>
+            <li class="item">Computer Networks </li>
+            <li class="item">Computer Graphics</li>
+            <li class="item">Software Quality Assurance</li>
+            <li class="item">Engineering Mathematics</li>
           </ul>
-          <span class="skill">c</span>
-          <span class="skill">c++</span>
-          <span class="skill">java</span>
-          <span class="skill">Html</span>
-          <span class="skill">css</span>
-          <span class="skill">js</span>
-          <span class="skill">bootstrap</span>
-          <span class="skill">sql</span>
+          <div ngsRevealSet [ngsSelector]="'.item'">
+            <span class="skill item">c</span>
+            <span class="skill item">c++</span>
+            <span class="skill item">java</span>
+            <span class="skill item">Html</span>
+            <span class="skill item">css</span>
+            <span class="skill item">js</span>
+            <span class="skill item">bootstrap</span>
+            <span class="skill item">sql</span>
+          </div>
         </div>
       </div>
     </div>
-    <div style="margin-right:0px;margin-left: 0px " class="row">
+    <div class="row rowOverR">
       <div class="col-md-2 col-sm-0"></div>
       <div class="col-md-8 col-sm-10">
-        <p style="font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.3em;
-    font-weight: 700;
-    border-bottom: 1px solid #CEC8C8;
-    font-size: 11px;
-    text-transform: uppercase;
-    padding-bottom: 3%;
-    margin-bottom: 5%;
-    "></p>
+        <p class="PEduSty"></p>
         <div onMouseOver="this.className= 'collegeDetailsOut'" onMouseOut="this.className= 'collegeDetails'" style="line-height: 34px;font-size: 19px;font-family: 'Karla', sans-serif;letter-spacing: 0.1em;filter: grayscale(100%)">
-          <div class=" col-md-1 hidden-sm hidden-xs">
-            <img src="../../assets/img/srv.png" />
+          <div class=" col-md-1 hidden-sm hidden-xs" ngsRevealSet [ngsSelector]="'.item'">
+            <img class="item" src="../../assets/img/srv.png" />
           </div>
           <div class="row col-md-11 col-sm-12">
-            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
-              <a target="_blank" class="col-md-8" style="font-weight: bold;text-decoration: none" href="http://www.srvacademy.org/hitechboys/">SRV Boys</a>
-              <span style="float: right;font-size: 14px" class="col-md-4">2010 - 2012</span>
+            <div class="row col-md-12 col-sm-12 rowOverR">
+              <a target="_blank" class="col-md-8 CollLink" href="http://www.srvacademy.org/hitechboys/">SRV Boys</a>
+              <span class="col-md-4 years">2010 - 2012</span>
             </div>
-            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
-              <span class="col-md-8" style="font-weight: bold">Higher Secondary</span>
-              <span style="float: right;font-size: 14px" class="col-md-4">Namakkal</span>
+            <div class="row rowOverR col-md-12 col-sm-12">
+              <span class="col-md-8 boldText">Higher Secondary</span>
+              <span class="col-md-4 years">Namakkal</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row" style="font-family: 'Open Sans', sans-serif;
-
-    margin-right:0px;
-    margin-left: 0px
-    ">
-      <div class="col-md-12 col-sm-12" style="margin-right:0px;margin-left: 0px; margin-top: 3%;line-height: 34px;font-size: 16px">
+    <div class="row RCourse">
+      <div class="col-md-12 col-sm-12 CCourseWork">
         <div class="col-md-3 col-sm-2"></div>
-        <div class="col-md-7 col-sm-10">
-          <div style="font-size: 19px;
-          line-height: 34px; margin-bottom: 4%">
+        <div class="col-md-7 col-sm-10" ngsRevealSet [ngsSelector]="'.item'">
+          <div class="item ContentPara">
             Higher Secondary Examination (12th board examination) is a centralized examination for class 12 students in India. HSC is
             an equivalent to GCE A Level in England.
           </div>
-          <span class="skill edu">Tamil Nadu State board</span>
-          <span class="skill">Biology</span>
-          <span class="skill">Mathematics</span>
-          <span class="skill">Physics</span>
-          <span class="skill">Chemistry</span>
-          <span class="skill">Tamil, English</span>
+          <span class="skill edu item">Tamil Nadu State board</span>
+          <span class="skill item">Biology</span>
+          <span class="skill item">Mathematics</span>
+          <span class="skill item">Physics</span>
+          <span class="skill item">Chemistry</span>
+          <span class="skill item">Tamil, English</span>
         </div>
       </div>
     </div>
-    <div style="margin-right:0px;margin-left: 0px " class="row">
+    <div class="row rowOverR">
       <div class="col-md-2 col-sm-0"></div>
       <div class="col-md-8 col-sm-10">
-        <p style="font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.3em;
-    font-weight: 700;
-    border-bottom: 1px solid #CEC8C8;
-    font-size: 11px;
-    text-transform: uppercase;
-    padding-bottom: 3%;
-    margin-bottom: 5%;
-    margin-top: 10%;
-    ">work experience</p>
+        <p class="schoolDetails">work experience</p>
         <div onMouseOver="this.className= 'collegeDetailsOut'" onMouseOut="this.className= 'collegeDetails'" style="line-height: 34px;font-size: 19px;font-family: 'Karla', sans-serif;letter-spacing: 0.1em;filter: grayscale(100%)">
-          <div class=" col-md-1 hidden-sm hidden-xs">
-            <img src="../../assets/img/dxc.png" />
+          <div class=" col-md-1 hidden-sm hidden-xs" ngsRevealSet [ngsSelector]="'.item'">
+            <img class="item" src="../../assets/img/dxc.png" />
           </div>
           <div class="row col-md-11 col-sm-12">
-            <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
-              <a target="_blank" class="col-md-8" style="font-weight: bold;text-decoration: none" href="http://www.dxc.technology">DXC Technology</a>
-              <span style="float: right;font-size: 14px" class="col-md-4">2017 - Current</span>
+            <div class="row rowOverR col-md-12 col-sm-12">
+              <a target="_blank" class="col-md-8 CollLink" href="http://www.dxc.technology">DXC Technology</a>
+              <span class="col-md-4 years">2017 - Current</span>
             </div>
             <div style="margin-right:0px;margin-left: 0px " class="row col-md-12 col-sm-12">
-              <span class="col-md-8" style="font-weight: bold">Full Stack Developer</span>
-              <span style="float: right;font-size: 14px" class="col-md-4">Chennai</span>
+              <span class="col-md-8 boldText">Full Stack Developer</span>
+              <span class="col-md-4 years">Chennai</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row" style="font-family: 'Open Sans', sans-serif;
-
-    margin-right:0px;
-    margin-left: 0px
-    ">
-      <div class="col-md-12 col-sm-12" style="margin-right:0px;margin-left: 0px; margin-top: 3%;line-height: 34px;font-size: 16px; margin-bottom: 5%">
+    <div class="row RCourse">
+      <div class="col-md-12 col-sm-12 WorkDetaisl">
         <div class="col-md-3 col-sm-2"></div>
-        <div class="col-md-7 col-sm-10">
-          <div style="font-size: 19px;
-          line-height: 34px; margin-bottom: 4%">
+        <div class="col-md-7 col-sm-10" ngsRevealSet [ngsSelector]="'.item'">
+          <div class="item ContentPara">
             Higher Secondary Examination (12th board examination) is a centralized examination for class 12 students in India. HSC is
             an equivalent to GCE A Level in England.
           </div>
-          <span class="skill">Angular 2, 4</span>
-          <span class="skill">Typescript</span>
-          <span class="skill">HTML</span>
-          <span class="skill">CSS, Bootstrap</span>
-          <span class="skill">Angular Material Design</span>
-          <span class="skill">.net</span>
-          <span class="skill">Caché DB</span>
-          <span class="skill edu">Adobe Photoshop</span>
+          <span class="skill item">Angular 2, 4</span>
+          <span class="skill item">Typescript</span>
+          <span class="skill item">HTML</span>
+          <span class="skill item">CSS, Bootstrap</span>
+          <span class="skill item">Angular Material Design</span>
+          <span class="skill item">.net</span>
+          <span class="skill item">Caché DB</span>
+          <span class="skill edu item">Adobe Photoshop</span>
         </div>
       </div>
     </div>
   </div>
-  <div style="background: #fafafa;
-  min-height: 10vh;
-  color: #b1b1b1;
-  font-size: 12px;
-  padding-top: 3%;
-  line-height: 20px;">
+  <div class="FooterSty">
     <div class="row col-md-12">
       <div class="col-md-1"></div>
       <span class="col-md-5">
-        <span class="col-md-1" style=" transform: rotate(180deg);">&copy;
+        <span class="col-md-1 rotate180">&copy;
         </span>2018 Sibiraj Rajendran</span>
     </div>
   </div>
