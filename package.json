@@ -9,6 +9,8 @@
     "angular5",
     "webpack",
     "typescript",
+    "tipe",
+    "tipe.io"
   ],
   "author": "sibiraj rajendran",
   "homepage": "",
@@ -72,7 +74,10 @@
     "watch:prod": "npm run build:prod -- --watch",
     "watch:aot:prod": "npm run build:aot:prod -- --watch",
     "watch:test": "npm run test -- --auto-watch --no-single-run",
-    "watch": "npm run watch:dev",    
+    "watch": "npm run watch:dev",
+    "webdriver-manager": "node ./node_modules/protractor/bin/webdriver-manager",
+    "webdriver:start": "node ./node_modules/protractor/bin/webdriver-manager start",
+    "webdriver:update": "node ./node_modules/protractor/bin/webdriver-manager update",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
   },
