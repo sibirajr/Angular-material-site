@@ -47,7 +47,7 @@
     "github-deploy": "npm run github-deploy:dev",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "node": "node",
-    "postinstall": "npm run webdriver:update",
+    "postinstall": "webpack -p --config ./webpack.prod.config.js --progress",
     "postversion": "git push && git push --tags",
     "preclean:install": "npm run clean",
     "preversion": "npm test",
@@ -104,7 +104,12 @@
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.5.2",
     "scrollreveal": "^3.3.6",
-    "zone.js": "~0.8.18"
+    "zone.js": "~0.8.18",
+	"webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-dev-server": "~2.7.1",
+    "webpack-dll-bundles-plugin": "^1.0.0-beta.5",
+    "webpack-merge": "~4.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-optimizer": "^0.0.32",
