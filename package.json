@@ -62,7 +62,7 @@
     "server:prod:ci": "http-server dist -p 3000 -c-1 --cors",
     "server": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
-    "start": "npm run server:dev",
+    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
     "start:aot": "npm run server:aot:dev",
     "test": "npm run lint && karma start",
     "tslint": "tslint",
