@@ -47,7 +47,7 @@
     "github-deploy": "npm run github-deploy:dev",
     "lint": "npm run tslint \"src/**/*.ts\"",
     "node": "node",
-    "postinstall": "webpack -p --config ./webpack.prod.js --progress",
+    "postinstall": "webpack -p --config ./config/webpack.prod.js --progress",
     "postversion": "git push && git push --tags",
     "preclean:install": "npm run clean",
     "preversion": "npm test",
