@@ -17,12 +17,12 @@
           <a class="anchorMenu" href="#résumé">Résumé</a>
         </li>
         <li class="menuList">
-          <a class="anchorMenu" href="#contact">contact</a>
+          <a class="anchorMenu" href="#work">work</a>
         </li>
       </ul>
     </mat-menu>
   </nav>
-  <div ngsRevealSet [ngsSelector]="'.item'">
+  <div id="sibi" ngsRevealSet [ngsSelector]="'.item'">
     <div class="imgMain hidden-sm hidden-xs item"></div>
     <img class="hidden-md hidden-lg item" style="width:100%" src="../../assets/img/programmer-1.jpg" />
   </div>
@@ -83,7 +83,7 @@
               <span class="inner  item">
                 [company: "DXC Technology"],</span>
               <br/>
-              <span class="inner item">[role: "Associate Applications Developer"],</span>
+              <span class="inner item">[role: "Associate Professional Product Developer"],</span>
               <br/>
               <span class="inner item"> [startDate: "April 2017"]</span>
               <br/>
@@ -104,7 +104,7 @@
       </div>
     </div>
   </div>
-  <div class="ResBgCol">
+  <div id="résumé" class="ResBgCol">
     <p class="PResCol">Résumé </p>
     <div class="row rowOverR">
       <div class="col-md-2 col-sm-0"></div>
@@ -221,15 +221,21 @@
         </div>
       </div>
     </div>
-    <div class="row RCourse">
+    <div id="work" class="row RCourse">
       <div class="col-md-12 col-sm-12 WorkDetaisl">
         <div class="col-md-3 col-sm-2"></div>
         <div class="col-md-7 col-sm-10" ngsRevealSet [ngsSelector]="'.item'">
           <div class="item ContentPara">
-            Higher Secondary Examination (12th board examination) is a centralized examination for class 12 students in India. HSC is
-            an equivalent to GCE A Level in England.
+            <ul class="listCourse" ngsRevealSet [ngsSelector]="'.item'">
+              <li class="item">Develop, test and implement new software programs in an agile environment.</li>
+              <li class="item">Develop, maintain software improvements to ensure strong functionality and optimization.</li>
+              <li class="item">Provide comprehensive support to internal customers, achieve resolution to outstanding problems or issues.</li>
+              <li class="item">Collaborate cross-functionally with data scientists, business users, project managers and other engineers to
+                achieve elegant solutions</li>
+              <li class="item">Compile timely, comprehensive and accurate documentation and or reports</li>
+            </ul>
           </div>
-          <span class="skill item">Angular 2, 4</span>
+          <span class="skill item">Angular 2+</span>
           <span class="skill item">Typescript</span>
           <span class="skill item">HTML</span>
           <span class="skill item">CSS, Bootstrap</span>
@@ -237,6 +243,31 @@
           <span class="skill item">.net</span>
           <span class="skill item">Caché DB</span>
           <span class="skill edu item">Adobe Photoshop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="résumé" class="WorkBgCol">
+    <p class="PResCol">work + fun </p>
+    <div class="row rowOverR">
+      <div class="col-md-2 col-sm-0"></div>
+      <div class="col-md-8 col-sm-10">
+        <p class="PEduWork  ">Laboratory Information Management (LIMS)</p>
+        <div class="WorkLIMS">
+          DXC's Laboratory Information Management System (LIMS) is a next-generation solution that helps pathology laboratories meet
+          the evolving demands of the modern pathology service.
+        </div>
+        <div class="marginTop25 WorkDes">
+          Role : Developer.
+        </div>
+        <ul class="listCourse" ngsRevealSet [ngsSelector]="'.item'">
+          <li class="item">Designed and Developed UI and services for the web application</li>
+        </ul>
+        <div class="polaroid">
+          <img src="../../assets/img/Kudos.JPG" alt="kudos" style="width:100%">
+          <div class="imgThumb">
+            Appreciation for Quality and Timely delivery, since inception.
+          </div>
         </div>
       </div>
     </div>
