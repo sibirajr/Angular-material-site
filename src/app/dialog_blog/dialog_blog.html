@@ -1,0 +1,400 @@
+<app-dialog [(visible)]="homeService.showDialogBlog" [width]="100" [height]="100" [headerColor]="'#dc1b16'">
+  <dialog-header>Alert !</dialog-header>
+  <dialog-body>
+
+    <div class="blogBody">
+      <div>
+        <div class="row rowNoM backgroundImg">
+          <div class="col-md-2 col-sm-2"></div>
+          <div class="col-md-6 col-sm-6">
+            <img class="imageMargin" src="../../assets/img/Dialog-Blog.jpg" />
+          </div>
+          <div class="col-md-4 col-sm-4 tableofContent">
+            <h3>Table of Contents</h3>
+            <ol class="listOL">
+              <li>
+                <a class="TableLink" href="#create">Create Angular CLI App</a>
+              </li>
+              <li>
+                <a class="TableLink" href="#ngcontent">Understanding Angular transclusion using ng-content</a>
+              </li>
+              <li>
+                <a class="TableLink" href="#multislot">Multi-Slot transclusion</a>
+              </li>
+              <li>
+                <a class="TableLink" href="#css">CSS Styles for modal</a>
+              </li>
+              <li>
+                <a class="TableLink" href="#conclusion">Conclusion</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="buttonBanner">
+          <a href="https://github.com/sibirajr/custom-angular-dialog/tree/master/custom-angular-dialog/src" target="_blank">
+            <button type="button" class="btn btn-success btmBamA">Code</button>
+          </a>
+          <button type="button" class="btn btn-success btmBamB">Demo</button>
+        </div>
+      </div>
+      <div class="blogMainBody">
+        <div class=" col-md-1"></div>
+        <div class=" col-md-10 blogBodyContent">
+          <p>
+            Angular is a full fledge Framework, it eases the efforts of developers with lot of functionalities out of box. Most modern
+            websites need modal windows to display or to obtain information. There are plenty of 3rd party packages for modals
+            and i used them myself and main issue faced is that they are quiet less configurable and we need to override
+            CSS classes to meet our requirements.
+          </p>
+          <p>
+            So i browsed to see how to write a dialog and i was surprised that it only needs only a few magical css lines. In this post
+            i will shared how to use angular features to build a custom dialog.
+          </p>
+          <h2 id="create">
+            Create Angular CLI App
+          </h2>
+          <p>
+            Angular CLI is like a swiss knife,it makes the development easier and more productive.
+          </p>
+          <p>
+            Lets consider you dont have CLI installed, then go ahead and install CLI using the command globally.
+          </p>
+          <div class="preCode">
+            npm install @angular/cli -g
+          </div>
+          <p>
+            Now lets create a new CLI app named
+            <span class="highlightText">my-custom-dialog</span>.
+          </p>
+          <div class="preCode">
+            ng new my-custom-dialog
+          </div>
+          <p>
+            This command will create a app in the folder my-custom-dialog, now lets
+            <span class="highlightText">cd</span> into the folder and run the command
+          </p>
+          <div class="preCode">
+            ng serve
+          </div>
+          <p>
+            This will run the angular app in port
+            <span class="highlightText">4200</span> by default. So you can launch the app by browsing to
+            <span class="highlightText">localhost:4200</span>. It will launch a default Angular cli app.
+          </p>
+          <p>
+            Now lets move on and create a component for dialog using CLI. Now we are creating a folder modules and we will put the contents
+            inside a folder named dialog nested inside modules folder.
+          </p>
+          <p>
+            Now lets create a module for the dialog component.
+          </p>
+          <div class="preCode">
+            ng generate module modules/dialog
+          </div>
+          <p>
+            And then let’s create the component.
+          </p>
+          <div class="preCode">
+            ng generate component modules/dialog
+          </div>
+          <p>This will create the following files in our
+            <span class="highlightText">src/app/module/dialog</span> folder:</p>
+          <ol>
+            <li>dialog.component.html</li>
+            <li>dialog.component.ts</li>
+            <li>dialog.component.css</li>
+            <li>dialog.module.ts</li>
+            <li>dialog.component.spec.ts</li>
+          </ol>
+          <h2 id="ngcontent">
+            Understanding Angular transclusion using ng-content
+          </h2>
+          <p>
+            Transclution is very useful and more powerful feature, using angular transclution we can inject any HTML content into a directive
+            template which is the most needed future to construct a modal. We can achieve transclution using
+            <span class="highlightText">ng-content</span> tag.
+          </p>
+          <p>
+            Now lets open the
+            <span class="highlightText">dialog.component.ts</span> and start building our dialog
+          </p>
+
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading codePanel">
+              dialog.component.ts
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustom">
+<code>
+import &#123; Component, OnInit, Input, Output, OnChanges, EventEmitter,
+        trigger, state, style, animate, transition &#125; from '@angular/core';<br>
+@Component(&#123;<br>
+  selector: 'dialog',<br>
+  templateUrl: 'dialog.component.html',<br>
+  styleUrls: ['./dialog.component.css']<br>
+  &#125;)<br>
+export class dialogComponent &#123;<br>
+    @Input() show: boolean;<br>
+    @Output() toggle: EventEmitter&#60;boolean&#62; = new EventEmitter&#60;boolean&#62;();<br>
+    closeDialog() &#123;
+
+      this.show = false;
+
+      this.toggle.emit(this.show);
+
+      &#125;
+    &#125;
+</code>
+                </pre>
+            </div>
+          </div>
+
+          Looking at our component decorators like
+          <span class="highlightText">input</span> and
+          <span class="highlightText">output</span> are used to communicate with other components, so that we can control visibility of dialog.
+          <br>
+
+          <p>
+            Lets design dialog template in
+            <span class="highlightText">dialog.component.html</span>
+          </p>
+          <div class="panel panel-default">
+            <div class="panel-heading codePanelHTML">
+              dialog.component.ts
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustomHTML">
+<code>
+  &#60;div *ngIf="show" class="popover"&#62;
+
+    &#60;ng-content&#62;&#60;/ng-content&#62;
+
+  &#60;/div>
+
+  &#60;div (click)="closeDialog()" class="close-btn">X&#60;/div>
+
+  &#60;div *ngIf="show" class="blurRemainingofScreen" (click)="closeDialog()"&#62;&#60;/div&#62;
+</code>
+                </pre>
+            </div>
+          </div>
+
+          <span class="highlightText">ng-content </span>tag is used here where contents of dialog is injected and displayed.
+          <span class="highlightText">ngIf </span>is used to toggle dialog visibility.
+          <br>
+          <h2 id="multislot">
+            Multi-Slot transclusion.
+          </h2>
+          <p>
+            Now lets utilize some real power of ng-content. What if there is a need to design a dialog where you are giving separate
+            inputs as header and body for the dialog. Here we can use
+            <span class="highlightText">select</span> where we define
+            <span class="highlightText">Multi-slot transclusion</span>. ng-content accepts a
+            <span class="highlightText">select</span> attribute, where we can define a name for a slot. Now lets open our template and make changes and
+            define a multiple slots
+          </p>
+
+
+          <div class="panel panel-default">
+            <div class="panel-heading codePanelHTML">
+              dialog.component.html
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustomHTML">
+<code>
+  &#60;div *ngIf="show" class="popover"&#62;
+
+    &#60;div class="dialog-header">
+
+      &#60;ng-content select="dialog-header">&#60;/ng-content>
+
+      &#60;div (click)="closeDialog()" class="close-btn">X&#60;/div>
+
+    &#60;/div>
+
+    &#60;ng-content select="dialog-body">&#60;/ng-content>
+
+  &#60;/div>
+
+  &#60;div *ngIf="show" class="blurRemainingofScreen" (click)="closeDialog()"&#62;&#60;/div&#62;
+</code>
+                </pre>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading codePanel">
+              dialog.module.ts
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustom">
+    <code>
+  import &#123; NgModule } from "@angular/core";
+
+  import &#123; CommonModule } from "@angular/common";
+
+  import &#123; DialogComponent } from "./dialog.component";
+
+  @NgModule(&#123;
+
+    imports: [CommonModule],
+
+    exports: [DialogComponent], ---->Do this
+
+    declarations: [DialogComponent]
+
+  })
+
+  export class DialogModule &#123;}
+
+    </code>
+                    </pre>
+            </div>
+          </div>
+          <p>
+            This ensures that an application that imports our dialogModule will actually be able to use the dialogComponent. Without
+            that exports array, the only components that would be able to use dialog in their templates would be other components
+            inside the dialogModule.
+          </p>
+
+          <div class="panel panel-default">
+            <div class="panel-heading codePanel">
+              app.module.ts
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustom">
+  <code>
+  ....
+
+  import &#123; DialogModule } from "./modules/dialog/dialog.module";<br>
+  ....
+  @NgModule(&#123;<br>
+  imports: [..,
+            DialogModule
+           ],
+
+  schemas: [NO_ERRORS_SCHEMA]
+    &#125;)<br>
+  </code>
+                  </pre>
+            </div>
+          </div>
+          <p>
+            Import dialog module in app.module.ts.
+          </p>
+
+          <p>
+            You will get an error
+            <span class="highlightText">Unhandled Promise rejection: Template parse errors: 'dialg-body' is not a known element</span>
+          </p>
+          <p>
+            Angular won't recognize these custom html tags. A quick way to get around this error is to add schema metadata property in
+            your module, set value to
+            <span class="highlightText">NO_ERRORS_SCHEMA</span> in your module file.
+          </p>
+
+          <h2 id="css">
+            CSS Styles for modal
+          </h2>
+
+          <div class="panel panel-default">
+            <div class="panel-heading codePanelCSS">
+              dialog.component.css
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustomCSS">
+<code>
+  .blurRemainingofScreen &#123;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    &#125;
+
+  .popover &#123;
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    &#125;
+
+  .close-btn &#123;
+    font-size: 35px;
+    cursor: pointer;
+    right: 10px;
+    position: absolute;
+    &#125;
+
+  .dialog-header &#123;
+    background-color:blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 40px;
+    &#125;
+
+</code>
+                </pre>
+            </div>
+          </div>
+          <p>
+            These styles are used to create a pop-over impression for our template content.
+            <span class="highlightText">z-index</span> plays a major role in styling of dialogs.</p>
+          <p>
+            Lets utilize our dialog component, consider we are in need for a popup in app.component.html.
+          </p>
+
+          <div class="panel panel-default">
+            <div class="panel-heading codePanelHTML">
+              app.component.ts
+            </div>
+            <div class="panel-body bodyCode">
+              <pre class="preCustomHTML">
+  <code>
+    &#60;button (click)="show = !show" class="btn">Open&#60;/button>
+
+    &#60;app-dialog [(show)]="show">
+
+      &#60;dialog-header>Alert!&#60;/dialog-header>
+
+        &#60;dialog-body>
+
+          &#60;button (click)="show = !show" class="btn">Close&#60;/button>
+
+        &#60;/dialog-body>
+
+    &#60;/app-dialog>
+  </code>
+                  </pre>
+            </div>
+          </div>
+          <p>
+            Now on launching the application you can see a button, upon clicking can toggle the dialog. Here
+            <span class="highlightText">show</span> variable is two way binded with the dialog component, where you can even control visibility of dialog
+            in app.component.ts rather directly toggling value in app.component.html.
+          </p>
+
+          <h2 id="conclusion">
+            Conclusion.
+          </h2>
+          <p>
+            Now we can utilize some features like ng-content, two way binding. In ng-content which type of selector to use depends on
+            your preferences. I prefer using HTML tag because it is more readable.
+          </p>
+          <br> That's it, Happy coding.
+
+        </div>
+      </div>
+    </div>
+  </dialog-body>
+</app-dialog>

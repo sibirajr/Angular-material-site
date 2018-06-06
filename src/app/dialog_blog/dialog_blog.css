@@ -1,0 +1,172 @@
+.blogBody {
+  height: 93vh;
+  overflow: auto;
+}
+
+.imageMargin {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 100%;
+}
+
+.backgroundImg {
+  background-image: url("../../assets/img/backgroung.png");
+  height: 100%;
+  width: 100%;
+}
+
+.rowNoM {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.buttonBanner {
+  background: #dc1b16;
+  text-align: center;
+  padding: 2vh;
+}
+
+.btmBamA {
+  width: 20vw;
+  height: 6vh;
+  background-color: #ff3860;
+  border-color: #ff3860;
+  color: black;
+}
+
+.btmBamB {
+  width: 20vw;
+  height: 6vh;
+  background-color: #ffdd57;
+  border-color: #ffdd57;
+  color: black;
+}
+
+.tableofContent {
+  color: white;
+  height: 50vh;
+  text-align: center;
+}
+
+.tableofContent li {
+  counter-increment: a;
+  list-style-type: none;
+}
+
+.tableofContent li:before {
+  content: counter(a);
+  margin-right: 5px;
+  font-size: 80%;
+  background-color: #dc1b16;
+  color: #fff;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.listOL {
+  text-align: left;
+  line-height: 30px;
+  margin-top: 5vh;
+}
+
+.blogMainBody {
+  margin-top: 10vh;
+}
+
+.TableLink {
+  color: gold;
+}
+
+.blogBodyContent {
+  background-color: #d6d6d4;
+  line-height: 1.62;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  padding: 45px;
+}
+
+.blogBodyContent h2 {
+  font-weight: 600;
+}
+
+.preCode {
+  margin-bottom: 2vh;
+  text-align: center;
+  display: block;
+  background: #eeeeee;
+  width: fit-content;
+  border: 1px solid #2196f3;
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 14px;
+  margin-left: 5vw;
+}
+
+.highlightText {
+  color: #f44336;
+  font-family: monospace;
+}
+
+.codePanel {
+  font-size: 14px;
+  text-align: end;
+  background: #2170c4;
+  color: white;
+  padding: 0px;
+  padding-right: 10px;
+}
+
+.preCustom {
+  background-color: inherit;
+  border: none;
+  font-size: 14px;
+  color: #2170c4;
+  overflow: auto;
+  width: max-content;
+}
+
+.bodyCode {
+  background: #1b1919;
+  overflow: auto;
+}
+
+.codePanelHTML {
+  font-size: 14px;
+  text-align: end;
+  background: #f26428;
+  color: white;
+  padding: 0px;
+  padding-right: 10px;
+}
+
+.preCustomHTML {
+  background-color: inherit;
+  border: none;
+  font-size: 14px;
+  color: #f26428;
+  overflow: auto;
+  width: max-content;
+}
+
+.codePanelCSS {
+  font-size: 14px;
+  text-align: end;
+  background: #61f228;
+  color: white;
+  padding: 0px;
+  padding-right: 10px;
+}
+
+.preCustomCSS {
+  background-color: inherit;
+  border: none;
+  font-size: 14px;
+  color: #61f228;
+  overflow: auto;
+  width: max-content;
+}

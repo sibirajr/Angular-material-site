@@ -288,3 +288,11 @@ div.polaroid {
   height: 10vh;
   padding-top: 3vh;
 }
+
+.marginTop60 {
+  margin-top: 60px;
+}
+
+.cursor {
+  cursor: pointer;
+}

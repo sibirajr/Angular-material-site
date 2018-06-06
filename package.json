@@ -97,6 +97,7 @@
     "angular-material": "^1.1.5",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.1",
+    "custom-angular-dialog": "^3.0.0",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
     "ng-drag-drop": "^4.0.0",
