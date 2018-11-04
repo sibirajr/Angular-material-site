@@ -1,0 +1,32 @@
+<div class="col-xs-6 col-sm-6 col-md-2" id="locationField">
+  <mat-form-field>
+    <input id="autocompleteFrom" matInput placeholder="Enter from city" type="text" />
+  </mat-form-field>
+</div>
+<div class="col-xs-6 col-sm-6 col-md-2" id="locationFieldTo">
+  <mat-form-field>
+    <input id="autocompleteTo" matInput placeholder="Enter to city" type="text" />
+  </mat-form-field>
+</div>
+<div>
+  <button class="col-xs-6 col-sm-6 col-md-1 BtN" id="searchButton" mat-button (click)="search()">
+    Route
+  </button>
+</div>
+<div class="findme col-xs-3 col-sm-3 col-md-3" id="wayPts" (click)="wayPointsSearch()">
+  <button class="BtNW" mat-button>
+    Try waypoints
+  </button>
+</div>
+<div class="findme col-xs-1 col-sm-1 col-md-1" id="find" (click)="findMe()">
+  <button mat-button>
+    <i class="material-icons">
+      my_location
+    </i>
+  </button>
+</div>
+<div class="map" #googleMap id="googleMap"></div>
+<!-- <button (click)="wayPointsSearch()">
+  Direction
+</button>
+<div class="map" id="CompleteDirection"></div> -->

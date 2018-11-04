@@ -19,6 +19,9 @@
         <li class="menuList">
           <a class="anchorMenu" href="#work">work</a>
         </li>
+        <li class="menuList">
+          <a class="anchorMenu" [routerLink]="['GMaps']">G-Map API</a>
+        </li>
       </ul>
     </mat-menu>
   </nav>
@@ -77,16 +80,16 @@
             </div>
             <div class="answer item">
               => Latest Work Experience
-              <br/>
+              <br />
               <span class="answer item">&#123;</span>
-              <br/>
+              <br />
               <span class="inner  item">
                 [company: "DXC Technology"],</span>
-              <br/>
+              <br />
               <span class="inner item">[role: "Associate Professional Product Developer"],</span>
-              <br/>
+              <br />
               <span class="inner item"> [startDate: "April 2017"]</span>
-              <br/>
+              <br />
               <span class="answer item">&#125;</span>
             </div>
             <div class="heading">
@@ -116,7 +119,8 @@
           </div>
           <div class="row col-md-11 col-sm-12">
             <div class="row col-md-12 col-sm-12 rowOverR">
-              <a target="_blank" class="col-md-8 CollLink" href="http://www.pit.ac.in/">Panimalar Institute of Technology</a>
+              <a target="_blank" class="col-md-8 CollLink" href="http://www.pit.ac.in/">Panimalar Institute of
+                Technology</a>
               <span class="col-md-4 years">2012 - 2016</span>
             </div>
             <div class="row rowOverR col-md-12 col-sm-12">
@@ -188,7 +192,8 @@
         <div class="col-md-3 col-sm-2"></div>
         <div class="col-md-7 col-sm-10" ngsRevealSet [ngsSelector]="'.item'">
           <div class="item ContentPara">
-            Higher Secondary Examination (12th board examination) is a centralized examination for class 12 students in India. HSC is
+            Higher Secondary Examination (12th board examination) is a centralized examination for class 12 students in
+            India. HSC is
             an equivalent to GCE A Level in England.
           </div>
           <span class="skill edu item">Tamil Nadu State board</span>
@@ -229,8 +234,10 @@
             <ul class="listCourse" ngsRevealSet [ngsSelector]="'.item'">
               <li class="item">Develop, test and implement new software programs in an agile environment.</li>
               <li class="item">Develop, maintain software improvements to ensure strong functionality and optimization.</li>
-              <li class="item">Provide comprehensive support to internal customers, achieve resolution to outstanding problems or issues.</li>
-              <li class="item">Collaborate cross-functionally with data scientists, business users, project managers and other engineers to
+              <li class="item">Provide comprehensive support to internal customers, achieve resolution to outstanding
+                problems or issues.</li>
+              <li class="item">Collaborate cross-functionally with data scientists, business users, project managers
+                and other engineers to
                 achieve elegant solutions</li>
               <li class="item">Compile timely, comprehensive and accurate documentation and or reports</li>
             </ul>
@@ -263,6 +270,14 @@
           </div>
         </div>
       </div>
+      <div class="col-md-5">
+        <div class="polaroid cursor" (click)="dialogBlogGMapClick()">
+          <img src="../../assets/img/GMap.jpg" alt="blog-1" style="width:100%">
+          <div class="imgThumb">
+            Exploring features in Google maps API
+          </div>
+        </div>
+      </div>
       <!--<div class="col-md-1"></div>
       <div class="col-md-5">
         <div class="polaroid">
@@ -279,7 +294,8 @@
       <div class="col-md-8 col-sm-10">
         <p class="PEduWork  ">Laboratory Information Management (LIMS)</p>
         <div class="WorkLIMS">
-          DXC's Laboratory Information Management System (LIMS) is a next-generation solution that helps pathology laboratories meet
+          DXC's Laboratory Information Management System (LIMS) is a next-generation solution that helps pathology
+          laboratories meet
           the evolving demands of the modern pathology service.
         </div>
         <div class="marginTop25 WorkDes">
@@ -309,3 +325,4 @@
 
 </html>
 <dialog_blog> </dialog_blog>
+<g-map-blog></g-map-blog>

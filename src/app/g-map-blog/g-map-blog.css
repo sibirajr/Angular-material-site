@@ -21,7 +21,7 @@
 }
 
 .buttonBanner {
-  background: #dc1b16;
+  background: #21bb61;
   text-align: center;
   padding: 2vh;
 }
@@ -56,7 +56,7 @@
   content: counter(a);
   margin-right: 5px;
   font-size: 80%;
-  background-color: #dc1b16;
+  background-color: #21bb61;
   color: #fff;
   font-weight: 700;
   padding: 3px 8px;

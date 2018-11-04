@@ -1,41 +1,43 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
-import { HttpModule } from "@angular/http";
-import { RouterModule, PreloadAllModules } from "@angular/router";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule, PreloadAllModules } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
   MatCheckboxModule,
   MatInputModule
-} from "@angular/material";
+} from '@angular/material';
 import {
   MatFormFieldModule,
   MatProgressSpinnerModule,
   MatMenuModule
-} from "@angular/material";
-import { MatIconModule } from "@angular/material";
+} from '@angular/material';
+import { MatIconModule } from '@angular/material';
 
-import { NgsRevealModule } from "ng-scrollreveal";
-import { DialogModule } from "custom-angular-dialog";
+import { NgsRevealModule } from 'ng-scrollreveal';
+import { DialogModule } from 'custom-angular-dialog';
 /*
  * Platform and Environment providers/directives/pipes
  */
-import { environment } from "environments/environment";
-import { ROUTES } from "./app.routes";
+import { environment } from 'environments/environment';
+import { ROUTES } from './app.routes';
 // App is our top level component
-import { AppComponent } from "./app.component";
-import { APP_RESOLVER_PROVIDERS } from "./app.resolver";
-import { AppState, InternalStateType } from "./app.service";
-import { HomeComponent } from "./home/home.component";
-import { AboutComponent } from "./about";
-import { NoContentComponent } from "./no-content";
-import { dialogblog } from "./dialog_blog/dialog_blog.component";
+import { AppComponent } from './app.component';
+import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import { AppState, InternalStateType } from './app.service';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about';
+import { NoContentComponent } from './no-content';
+import { dialogblog } from './dialog_blog/dialog_blog.component';
+import { GMapsExp } from './g-map/g-map.component';
+import { GMapBlog } from './g-map-blog/g-map-blog.component';
 
-import { HomeService } from "./home/home.service";
+import { HomeService } from './home/home.service';
 
-import "../styles/styles.scss";
-import "../styles/headings.css";
+import '../styles/styles.scss';
+import '../styles/headings.css';
 
 // Application wide providers
 const APP_PROVIDERS = [...APP_RESOLVER_PROVIDERS, AppState];
@@ -56,6 +58,8 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     dialogblog,
+    GMapsExp,
+    GMapBlog,
     NoContentComponent
   ],
   /**

@@ -94,6 +94,7 @@
     "@angular/platform-browser-dynamic": "~5.0.1",
     "@angular/platform-server": "~5.0.1",
     "@angular/router": "~5.0.1",
+    "@types/googlemaps": "^3.30.16",
     "angular-material": "^1.1.5",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.1",

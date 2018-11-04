@@ -24,4 +24,8 @@ export class HomeComponent implements OnInit {
   public dialogBlogClick() {
     this.homeService.showDialogBlog = true;
   }
+
+  public dialogBlogGMapClick(){
+    this.homeService.showDialogGMapBlog = true;
+  }
 }

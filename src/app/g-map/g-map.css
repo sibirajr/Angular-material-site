@@ -1,0 +1,30 @@
+.map {
+  height: 91vh;
+  width: 99.9vw;
+}
+
+.findme {
+  padding: 0px;
+  height: 40px;
+}
+
+.BtN {
+  background-color:#78c1b0;
+  color: #fff;
+  height: 40px;
+}
+
+.BtNW {
+  background-color:#e67561;
+  color: #fff;
+  height: 40px;
+}
+
+#autocomplete {
+  width: 100%;
+}
+
+.GMap{
+  position: absolute;
+  z-index: 5;
+}
