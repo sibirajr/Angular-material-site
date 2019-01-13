@@ -17,10 +17,13 @@
           <a class="anchorMenu" href="#résumé">Résumé</a>
         </li>
         <li class="menuList">
-          <a class="anchorMenu" href="#work">work</a>
+          <a class="anchorMenu" href="#work">work + fun</a>
         </li>
         <li class="menuList">
           <a class="anchorMenu" [routerLink]="['GMaps']">G-Map API</a>
+        </li>
+        <li class="menuList">
+          <a class="anchorMenu" target="_blank" href="https://hackathon2k18-9873f.firebaseapp.com/">Hackathon 2k18</a>
         </li>
       </ul>
     </mat-menu>
@@ -97,7 +100,7 @@
             </div>
             <div class="answer item PLinkCol">
               =>
-              <a href="mailto:sibirajandrajendran@gmail.com">["sibirajandrajendran@gmail.com"]</a>
+              <a href="mailto:mail@sibiraj.co.in">["mail@sibiraj.co.in"]</a>
             </div>
           </div>
         </div>
@@ -108,7 +111,8 @@
     </div>
   </div>
   <div id="résumé" class="ResBgCol">
-    <p class="PResCol">Résumé </p>
+    <p class="PResCol">Résumé <button class="resumeDownload"><a href="../../assets/Sibiraj-Rajendran.pdf" download="Sibiraj-Rajendran.pdf"><i
+            class="fas fa-download"></i></a></button></p>
     <div class="row rowOverR">
       <div class="col-md-2 col-sm-0"></div>
       <div class="col-md-8 col-sm-10">
@@ -242,7 +246,7 @@
               <li class="item">Compile timely, comprehensive and accurate documentation and or reports</li>
             </ul>
           </div>
-          <span class="skill item">Angular 2+</span>
+          <span class="skill item">Angular 2,4,6</span>
           <span class="skill item">Typescript</span>
           <span class="skill item">HTML</span>
           <span class="skill item">CSS, Bootstrap</span>
@@ -293,21 +297,43 @@
       <div class="col-md-2 col-sm-0"></div>
       <div class="col-md-8 col-sm-10">
         <p class="PEduWork  ">Laboratory Information Management (LIMS)</p>
-        <div class="WorkLIMS">
-          DXC's Laboratory Information Management System (LIMS) is a next-generation solution that helps pathology
-          laboratories meet
-          the evolving demands of the modern pathology service.
+        <div class="WorkLIMS" ngsRevealSet [ngsSelector]="'.item'">
+          <span class="item">
+            DXC's Laboratory Information Management System (LIMS) is a next-generation solution that helps pathology
+            laboratories meet
+            the evolving demands of the modern pathology service.
+          </span>
         </div>
-        <div class="marginTop25 WorkDes">
-          Role : Developer.
+        <div ngsRevealSet [ngsSelector]="'.item'">
+          <div class="margin2 WorkDes item">
+            Role : Developer.
+          </div>
+          <div class="margin2 WorkDes item">
+            Team size : 15.
+          </div>
+          <div class="margin2 WorkDes item">
+            Skills used : Angular 5, Web API(.net), Caché, CSS, Bootstrap, Material design.
+          </div>
         </div>
-        <ul class="listCourse" ngsRevealSet [ngsSelector]="'.item'">
-          <li class="item">Designed and Developed UI and services for the web application</li>
+        <ul class="workList" ngsRevealSet [ngsSelector]="'.item'">
+          <li class="item">Designed, developed UI and related functionalities in Angular,
+            involved in Angular version
+            migrations and UI/UX improvements.</li>
+          <li class="item">Retrieve, save data from database and publish using web API's,
+            later consumed in the front end.</li>
+          <li class="item">Architectured functionalities, design and implement algorithms with efficient performance
+            and better
+            maintenance</li>
+          <li class="item">Worked with development manager, team lead and others to plan design,development efforts and
+            provide realistic estimates to
+            be included in delivery schedule</li>
         </ul>
-        <div class="polaroid">
-          <img src="../../assets/img/Kudos.JPG" alt="kudos" style="width:100%">
-          <div class="imgThumb">
-            Appreciation for Quality and Timely delivery, since inception.
+        <div class="col-md-10 col-sm-12" ngsRevealSet [ngsSelector]="'.item'">
+          <div class="polaroid item">
+            <img src="../../assets/img/Kudos.JPG" alt="kudos" style="width:100%">
+            <div class="imgThumb">
+              Appreciation for Quality and Timely delivery, since inception.
+            </div>
           </div>
         </div>
       </div>
@@ -316,12 +342,88 @@
   <div class="FooterSty">
     <div class="row col-md-12">
       <div class="col-md-1"></div>
-      <span class="col-md-5">
+      <span class="col-md-2 col-sm-2 padtop2">
         <span class="col-md-1 rotate180">&copy;
-        </span>2018 Sibiraj Rajendran</span>
+        </span>
+        2018 Sibiraj Rajendran
+      </span>
+      <!-- <div class="contic">
+        <ul class="contactsIcons">
+          <li>
+            <a href="">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span>
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div> -->
     </div>
   </div>
 </body>
+<div class="contic">
+  <ul class="contactsIcons">
+    <li>
+      <a target="_blank" href="https://github.com/sibirajr">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.linkedin.com/in/sibiraj-rajendran">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.npmjs.com/~sibirajrajendran">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>
+          <i class="fab fa-npm" aria-hidden="true"></i>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.facebook.com/sibiraj1994">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
 
 </html>
 <dialog_blog> </dialog_blog>

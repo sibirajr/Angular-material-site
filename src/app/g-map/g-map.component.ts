@@ -10,7 +10,8 @@ import {} from '@types/googlemaps';
   templateUrl: './g-map.html'
 })
 export class GMapsExp implements OnInit {
-  @ViewChild('googleMap') private gmapElement: any;
+  @ViewChild('googleMap')
+  private gmapElement: any;
   private map: google.maps.Map;
   private directionsService: any;
   private directionsDisplay: any;
@@ -58,7 +59,7 @@ export class GMapsExp implements OnInit {
     this.places = new google.maps.places.PlacesService(this.map);
   }
 
-  private search() {
+  public search() {
     var place = this.autocompleteFrom.getPlace();
     var placeTo = this.autocompleteTo.getPlace();
     if (place && place.geometry) {
@@ -80,7 +81,7 @@ export class GMapsExp implements OnInit {
       );
     }
   }
-  private findMe() {
+  public findMe() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         function(position) {
@@ -98,7 +99,7 @@ export class GMapsExp implements OnInit {
     }
   }
 
-  private wayPointsSearch() {
+  public wayPointsSearch() {
     let waypts: way[];
     waypts = new Array<way>();
     waypts.push({

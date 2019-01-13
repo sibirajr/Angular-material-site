@@ -71,3 +71,6 @@ dll/
 *.css.shim.ts
 *.ngsummary.json
 *.shim.ngstyle.ts
+.firebase/hosting.ZGlzdA.cache
+.firebase/hosting.bg.cache
+.firebase/hosting.eQ.cache

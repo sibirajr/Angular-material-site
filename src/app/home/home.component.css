@@ -1,12 +1,12 @@
 .heading {
-  font-family: "Monaco", "Courier New";
+  font-family: 'Monaco', 'Courier New';
   color: white;
   margin-top: 2%;
   margin-left: 3%;
 }
 
 .answer {
-  font-family: "Monaco", "Courier New";
+  font-family: 'Monaco', 'Courier New';
   color: wheat;
   margin-left: 5%;
 }
@@ -25,7 +25,7 @@
 .anchorMenu {
   color: white;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -62,7 +62,7 @@
 }
 
 .imgMain {
-  background-image: url("../../assets/img/programmer-1.jpg");
+  background-image: url('../../assets/img/programmer-1.jpg');
   width: 100%;
   min-height: 42vw;
   background-attachment: fixed;
@@ -75,7 +75,7 @@
 }
 
 .navbarText {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
@@ -104,7 +104,7 @@
 }
 
 .PColor {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   padding-top: 4%;
   letter-spacing: 0.3em;
@@ -122,6 +122,7 @@
 .PHeadCol {
   background-color: #7c8081;
 }
+
 .PContentCol {
   background-color: #383737;
 }
@@ -140,7 +141,7 @@
 
 .PResCol {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.3em;
   font-weight: 800;
   font-size: 11px;
@@ -150,7 +151,7 @@
 }
 
 .PEduSty {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.3em;
   font-weight: 700;
   border-bottom: 1px solid #cec8c8;
@@ -161,7 +162,7 @@
 }
 
 .PEduWork {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.3em;
   font-weight: 700;
   border-bottom: 1px solid #cec8c8;
@@ -193,7 +194,7 @@
 }
 
 .RCourse {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin-right: 0px;
   margin-left: 0px;
 }
@@ -228,7 +229,7 @@
 }
 
 .schoolDetails {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.3em;
   font-weight: 700;
   border-bottom: 1px solid #cec8c8;
@@ -253,8 +254,11 @@
   min-height: 10vh;
   color: #b1b1b1;
   font-size: 12px;
-  padding-top: 3%;
   line-height: 20px;
+}
+
+.padtop2 {
+  padding-top: 2%;
 }
 
 .rotate180 {
@@ -295,4 +299,110 @@ div.polaroid {
 
 .cursor {
   cursor: pointer;
+}
+
+.margin2 {
+  font-family: Courier New;
+  margin: 2%;
+}
+
+.workList {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  list-style: none;
+}
+
+.workList li::before {
+  content: 'work';
+  font-family: 'Material Icons';
+  display: inline-block;
+  width: 2em;
+}
+
+.contic {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 2000;
+}
+
+.contic ul {
+  font-size: 2em;
+  position: relative;
+  display: flex;
+}
+
+.contic ul li {
+  position: relative;
+  list-style: none;
+  width: 5vh;
+  height: 5vh;
+  margin: 0 2vh;
+  transform: rotate(-30deg) skew(25deg);
+  background: #ccc;
+}
+
+.contic ul li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transition: 0.5s;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.contic ul li:hover span:nth-child(5) {
+  transform: translate(4vh, -4vh);
+  opacity: 1;
+}
+
+.contic ul li:hover span:nth-child(4) {
+  transform: translate(3vh, -3vh);
+  opacity: 0.8;
+}
+
+.contic ul li:hover span:nth-child(3) {
+  transform: translate(2vh, -2vh);
+  opacity: 0.6;
+}
+
+.contic ul li:hover span:nth-child(2) {
+  transform: translate(1vh, -1vh);
+  opacity: 0.4;
+}
+
+.contic ul li:hover span:nth-child(1) {
+  transform: translate(0, 0);
+  opacity: 0.2;
+}
+
+.contic ul li:nth-child(2) span {
+  background: #0073af !important;
+}
+
+.contic ul li:nth-child(3) span {
+  background: #cb3837 !important;
+}
+
+.contic ul li:nth-child(4) span {
+  background: #405e9b !important;
+}
+
+.resumeDownload {
+  background: black;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .contic ul li {
+    transform: none;
+  }
 }
